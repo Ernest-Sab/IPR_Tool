@@ -61,26 +61,26 @@ The scripts are compatible with both Python 2 and Python 3.
 
 ## Files
 
-[Open IPR Tool](IPRescue_Tool\open_IPRescue.py)
+[Open IPR Tool](../IPRescue_Tool/open_IPRescue.py)
 
 This script imports and opens the Easy Deform UI in Autodesk Maya.
 
-[IPR UI](IPRescue_Tool\Scripts\IPRescue_UI.py)
+[IPR UI](../IPRescue_Tool/Scripts/IPRescue_UI.py)
 
 This script provides the main user interface for the Easy Deform tool. 
 It includes classes for creating and managing the SuperDelta and Pull-Push deformers.
 
-[IPR Program File](IPRescue_Tool\Scripts\IPRescue_prog.py)
+[IPR Program File](../IPRescue_Tool/Scripts/IPRescue_prog.py)
 
 This module provides core functionalities for the Easy Deform tool. 
 It includes functions for checking selections, applying paint modes, and creating deformers such as deltaMush and texture deformers.
 
-[Maya Utilities](IPRescue_Tool\Scripts\Resources\maya_utils.py)
+[Maya Utilities](..\IPRescue_Tool/Scripts/Resources/maya_utils.py)
 
 This module provides utility functions for working with Autodesk Maya. 
 It includes functions to get the Maya main window and delete workspace controls.
 
-[UI Utilities](IPRescue_Tool\Scripts\Resources\UI_utils.py)
+[UI Utilities](../IPRescue_Tool/Scripts/Resources/UI_utils.py)
 
 This module provides utility classes and functions for creating and managing UI components using PySide2. 
 It includes classes for sliders, checkboxes, combo boxes, line edits, drop-down menus, and dynamic menu bars.
