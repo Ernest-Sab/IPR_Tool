@@ -51,7 +51,6 @@ from PySide2 import QtCore, QtWidgets, QtGui
 
 import os
 import sys
-sys.path.append(r'C:\Users\ernes\Documents\Personal_projects\Cleanup_Tool_gumroad\free_version')
 
 from Resources.maya_utils import get_maya_main_window, delete_workspace_control
 from Resources.UI_utils import DropMenu, DynamicMenuBar, Sliders
@@ -191,8 +190,10 @@ class superDelta(QtWidgets.QDialog):
 
             mc.undoInfo(closeChunk=True)
         
-        except:
+        except Exception as e:
             mel.eval("paneLayout -e -manage true $gMainPane")
+            mc.undoInfo(closeChunk=True)
+            QtWidgets.QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
 
 class PullPush(QtWidgets.QDialog):
     def __init__(self, parent=None):
@@ -341,8 +342,10 @@ class PullPush(QtWidgets.QDialog):
             mel.eval("paneLayout -e -manage true $gMainPane")
 
             mc.undoInfo(closeChunk=True)
-        except:
+        except Exception as e:
             mel.eval("paneLayout -e -manage true $gMainPane")
+            mc.undoInfo(closeChunk=True)
+            QtWidgets.QMessageBox.critical(self, 'Error', f'An error occurred: {e}')
 
 class ToolsUI(MayaQWidgetDockableMixin, QtWidgets.QDialog):
 
@@ -432,8 +435,8 @@ class ToolsUI(MayaQWidgetDockableMixin, QtWidgets.QDialog):
                 os.startfile(readme_path)
             else:
                 QtWidgets.QMessageBox.warning(self, 'Error', 'README.md file not found.')
-        except AttributeError:
-            QtWidgets.QMessageBox.warning(self, 'Error', 'Could not determine script directory.')
+        except Exception as e:
+            QtWidgets.QMessageBox.warning(self, 'Error', f'Could not open README.md: {e}')
 
     def contacts(self):
         messageBox = QtWidgets.QMessageBox(self)
