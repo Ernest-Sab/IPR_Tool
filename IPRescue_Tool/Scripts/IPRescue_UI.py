@@ -430,7 +430,8 @@ class ToolsUI(MayaQWidgetDockableMixin, QtWidgets.QDialog):
 
     def open_readme(self):
         try:
-            readme_path = r'C:\Users\ernes\Documents\Personal_projects\Cleanup_Tool_gumroad\free_version\README.md'
+            script_dir = os.path.dirname(__file__)
+            readme_path = os.path.join(script_dir, '..', 'README.md')
             if os.path.exists(readme_path):
                 os.startfile(readme_path)
             else:

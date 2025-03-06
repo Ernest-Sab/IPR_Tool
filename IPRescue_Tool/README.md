@@ -33,8 +33,10 @@ Pre or Post simulation, but it can be used everywhere it is necessary to deform 
 To open the IPRescue UI in Autodesk Maya, run the following command in the Maya script editor using the Python tab:
 
 ```python
-import open_IPRescue
-open_IPRescue.open_IPRescue_ui()
+from IPRescue_Tool import open_IPRescue as ipr
+
+if __name__ == '__main__':
+    ipr.open_IPRescue_ui()
 ```
 
 You can also create a shelf button by dragging the code into the shelf.

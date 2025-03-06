@@ -24,13 +24,18 @@ March 5, 2025
 """
 
 from __future__ import absolute_import, division, print_function, unicode_literals
-import sys
 import traceback
+import sys
+import os
 
-sys.path.append(r'C:\Users\ernes\Documents\Personal_projects\Cleanup_Tool_gumroad\free_version')
-import IPRescue_UI
+# Add the Scripts directory to the sys.path
+scripts_dir = os.path.join(os.path.dirname(__file__), 'Scripts')
+if scripts_dir not in sys.path:
+    sys.path.append(scripts_dir)
 
-def open_easy_deform_ui():
+import IPRescue_UI as IPRescue_UI
+
+def open_IPRescue_ui():
     try:
         mainUi = IPRescue_UI.ToolsUI()
         mainUi.show(dockable=True)
@@ -39,4 +44,4 @@ def open_easy_deform_ui():
         print('An error occurred: {}'.format(e))
 
 if __name__ == '__main__':
-    open_easy_deform_ui()
+    open_IPRescue_ui()
