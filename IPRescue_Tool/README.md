@@ -59,7 +59,7 @@ The scripts are compatible with both Python 2 and Python 3.
 
 ## Files
 
-[Open IPR Tool](IPRescue_Tool\open_IPRescue.py)
+[Open IPR Tool](IPRescue_Tool/open_IPRescue.py)
 
 This script imports and opens the Easy Deform UI in Autodesk Maya.
 
