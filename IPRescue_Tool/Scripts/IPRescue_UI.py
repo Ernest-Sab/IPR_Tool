@@ -83,7 +83,7 @@ class superDelta(QtWidgets.QDialog):
 
     def create_widgets(self):
         # Import Slider
-        self.iterations_slider = Sliders('Iteration')
+        self.iterations_slider = Sliders('Iteration', value={'min':1, 'max':300, 'decimal': 0, 'default':10, 'interval':1})
         self.paint_smooth_slider = Sliders('Paint Smooth Value', value={'min':0, 'max':10, 'decimal': 0, 'default':2, 'interval':1})
 
         # Apply button
