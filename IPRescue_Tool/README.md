@@ -42,19 +42,29 @@ if __name__ == '__main__':
 You can also create a shelf button by dragging the code into the shelf.
 
 ### SuperDelta Deformer
-The SuperDelta will be applied to the correct frame to make it work properly automatically.
+The SuperDelta Tool is based on the DeltaMush native Maya Deformer.
+The SuperDelta will automitize some processes that are fundamental in making the deformer work properly,
+as, for example, appling it to the correct frame in the timeline.
 
-- Object Mode: Select the geometry in object mode and apply the deltaMush deformer. 
-The influences will be painted to 0%, and you can paint the influence where needed.
-- Component Mode: Select components and apply the deltaMush deformer. 
+The tool can be used in 2 modes:
+- **Object Mode**: Select the geometry in object mode and apply the deltaMush deformer. 
+Applying the deltaMush through Object selection will create a normal deltaMush, 
+but all the influences will be painted to 0%.
+- **Component Mode**: Select components and apply the deltaMush deformer. 
 The influence will be painted in the specified area, and you can adjust the smooth area with the Paint Smooth Value.
 
 ### Pull-Push Deformer
+The Pull-Push Tool is based on the Texture Deformer native Maya Deformer.
+This tool will automatize some settings based on your needs to cover the purpose of cleaning IP in shots.
 
-1. Object Mode: Select the geometry in object mode and apply the Pull or Push deformer. 
+The tool can be used in 2 modes:
+1. **Object Mode**: Select the geometry in object mode and apply the Pull or Push deformer. 
 The influences will be painted to 0%, and you can paint the influence where needed.
-2. Component Mode: Select components and apply the Pull or Push deformer. 
+2. **Component Mode**: Select components and apply the Pull or Push deformer. 
 The influence will be painted in the specified area, and you can adjust the smooth area with the Paint Smooth Value.
+
+- **PULL BUTTON**: The Pull button will set the deformer so that the geo will be moved outside following its normals.
+- **PUSH BUTTON**: The Push button will set the deformer so that the geo will be moved inside following its normals.
 
 ## Compatibility
 The scripts are compatible with both Python 2 and Python 3.
