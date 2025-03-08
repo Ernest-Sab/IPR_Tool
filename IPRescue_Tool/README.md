@@ -11,10 +11,8 @@ March 5, 2025
 
 ## Description
 
-The IPRescue is a user-friendly tool for Autodesk Maya that provides functionalities for creating and managing deformers 
-to cleanup IPs in shots.
-This tool is a mix of multiple tools built initially for the CFX or Tech Anim department to speed-up the Cleanup process 
-Pre or Post simulation, but it can be used everywhere it is necessary to deform and clean IPs.
+The IPRescue is a user-friendly tool for Autodesk Maya that provides functionalities for creating and managing deformers to cleanup IPs in shots.
+This tool is a mix of multiple tools built initially for the CFX or Tech Anim department to speed-up the Cleanup process of Pre or Post simulation, but it can be used everywhere it is necessary to deform and clean IPs.
 
 ## Features
 
